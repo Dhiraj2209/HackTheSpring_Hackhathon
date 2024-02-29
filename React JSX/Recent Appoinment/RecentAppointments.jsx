@@ -65,7 +65,7 @@ const Appointments = () => {
                     <td>{appointment.reason}</td>
                     <td>{appointment.status}</td>
                     <td>
-                        <button onClick={() => console.log('View details for:', appointment.patientName)}>
+                        <button id='recent-app-viewdetailsbutton' onClick={() => console.log('View details for:', appointment.patientName)}>
                             View Details
                         </button>
                     </td>
@@ -98,7 +98,7 @@ const Appointments = () => {
             </div>
             
             <hr />
-            <div>
+            <div id='recent-app-serchbar'>
                 Search by Patient Name: 
                 <input type="text" id="recent-app-searchInput" onChange={searchAppointments} />
             </div>

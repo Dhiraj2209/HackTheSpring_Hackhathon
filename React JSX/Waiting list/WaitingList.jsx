@@ -31,12 +31,14 @@ const WaitingList = () => {
             const actionCell = row.insertCell(7);
             const acceptButton = document.createElement('button');
             acceptButton.textContent = 'Accept';
+            acceptButton.classList.add('wait-list-accept-button');
             acceptButton.addEventListener('click', () => {
                 console.log('Accepted for:', appointment.patientName);
             });
             actionCell.appendChild(acceptButton);
             const rejectButton = document.createElement('button');
             rejectButton.textContent = 'Reject';
+            rejectButton.classList.add('wait-list-reject-button');
             rejectButton.addEventListener('click', () => {
                 console.log('Rejected for:', appointment.patientName);
             });
@@ -119,7 +121,7 @@ const WaitingList = () => {
             </div>
 
             <hr />
-            <div>
+            <div id='wait-list-serchbar'>
                 Search by Patient Name:
                 <input type="text" id="wait-list-searchInput" onInput={searchAppointments} />
             </div>
